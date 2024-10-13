@@ -94,10 +94,10 @@ for epoch in range(200):
 plt.figure(figsize=(10, 5))
 plt.plot(train_accuracies, label='Train Accuracy')
 plt.plot(val_accuracies, label='Validation Accuracy')
-plt.xlabel('Epoch')
-plt.ylabel('Accuracy')
-plt.title('Train and Validation Accuracy based on the Pubmed dataset')
-plt.legend()
+plt.xlabel('Epoch', fontsize=14)
+plt.ylabel('Accuracy', fontsize=14)
+plt.title('Train and Validation Accuracy based on the Pubmed dataset', fontsize=14)
+plt.legend(fontsize='large')
 plt.savefig('Training and Validation Accuracy based on the Pubmed dataset.jpg')  # 保存图像
 plt.show()
 
@@ -113,10 +113,10 @@ def plot_tsne(embeddings, labels, title='t-SNE'):
     for label in np.unique(labels):
         indices = labels == label
         plt.scatter(embeddings_2d[indices, 0], embeddings_2d[indices, 1], label=class_names[label], s=10)
-    plt.legend()
-    plt.xlabel('x')
-    plt.ylabel('y')
-    plt.title(title)
+    plt.legend(fontsize='large')
+    plt.xlabel('x', fontsize=14)
+    plt.ylabel('y', fontsize=14)
+    plt.title(title, fontsize=14)
     plt.savefig(title + '.jpg')  # 保存图像
     plt.show()
 
